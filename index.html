@@ -20,17 +20,17 @@
             <h1 class="font-bold text-sm md:text-xl text-[#006747]">Emergency <br> Service</h1>
           </div>
 
-          <div class="flex justify-center items-center md:gap-6 gap-1 ">
+          <div class=" flex justify-center items-center md:gap-6 gap-1 ">
             <div class="flex justify-center items-center gap-1 p-3 bg-emerald-50 h-[30px] md:h-[40px] md:w-[100px] rounded-l-full rounded-r-full">
-              <span class="font-bold text-sm md:text-lg" id="heartCount">0</span>
+              <span class="font-bold text-sm md:text-lg" id="heartCount"></span>
               <img src="./assets/heart.png" alt="" class="w-[20px] md:w-[30px] md:h-[25px]">
             </div>
-            <div class="flex justify-center items-center gap-1 p-3 bg-emerald-50 h-[30px] md:h-[40px] md:w-[100px] rounded-l-full rounded-r-full">
+            <div class=" flex justify-center items-center gap-1 p-3 bg-emerald-50 h-[30px] md:h-[40px] md:w-[100px] rounded-l-full rounded-r-full">
               <span class="font-bold text-sm md:text-base" id="coinCount">100</span>
               <img src="./assets/coin.png" alt="" class="w-[20px] md:w-[30px] md:h-[25px]">
             </div>
-            <div class="flex justify-center items-center gap-1 p-3 bg-[#00A63E] h-[30px] md:h-[40px] md:w-[100px] rounded-l-full rounded-r-full">
-              <span class="font-bold text-sm md:text-base" id="copyCount">0</span>
+            <div class=" flex justify-center items-center gap-1 p-3 bg-[#00A63E] h-[30px] md:h-[40px] md:w-[100px] rounded-l-full rounded-r-full">
+              <span class="font-bold text-sm md:text-base" id="copyCount"></span>
               <p class="font-semibold text-white text-sm md:text-base">Copy</p>
             </div>
           </div>
@@ -47,11 +47,11 @@
     </div>
   </header>
   <!-- main section -->
-   <main>
-    <section id="productContainer" class="w-11/12 mx-auto py-8 grid grid-cols-12 gap-6">
+   <main class="max-w-7xl mx-auto">
+    <section id="productContainer" class="m-2 lg:mx-auto py-8 grid lg:grid-cols-12 grid-cols-1 gap-6">
       <!-- left card -->
-      <section id="product-box" class=" col-span-9">
-        <div class="grid md:grid-cols-3 gap-5">
+      <section id="product-box" class=" lg:col-span-9 col-span-12">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
           <!-- card-1 -->
           <article class="bg-white p-4 rounded-xl card-shadow">
             <div>
@@ -268,26 +268,24 @@
               <button class="call-btn flex-1 rounded px-3 py-2 text-sm  bg-emerald-600 text-white" id="call-btn"> Call</button>
             </div>
           </article>
-          
-          
-
-
         </div>
       </section>
       <!-- right History -->
-      <section id="History-card" class="bg-white col-span-3">
-        <div class="flex justify-between items-center p-4 h-[60px]">
-          <p><i class="fa-regular fa-clock"></i>Call History</p>
+      <section id="history-card" class="bg-white lg:col-span-3 col-span-12 p-4 ">
+        <div class="flex justify-between items-center  h-[60px]">
+          <p><i class="fa-regular fa-clock mr-1"></i>Call History</p>
           <div class="bg-green-500 w-[70px] items-center text-center rounded-l-full rounded-r-full">
             <button id="clearBtn">Clear</button>
           </div>
         </div>
 
-        <div class="space-y-5">
+        <div class="space-y-5 mx-auto" id="historyList">
+        
 
         </div>
       </section>
     </section>
    </main>
+   <script src="./index.js"></script>
 </body>
 </html
