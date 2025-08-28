@@ -11,6 +11,23 @@ const historyList = document.getElementById("historyList");
 copyDisplay.innerText = copyCount;
 heartDisplay.innerText = heartCount;
 
+const heartList = document.querySelectorAll(".heart-btn");
+heartList.forEach((card) => {
+    card.addEventListener("click", function () {
+        heartCount++;
+        heartDisplay.innerText = heartCount;
+    });
+});
+
+const cardList = document.querySelectorAll(".copy-btn");
+cardList.forEach((card) => {
+    card.addEventListener("click", function () {
+        copyCount++;
+        copyDisplay.innerText = copyCount;
+        let number = card.parentElement.parentElement.children[0].children[3].children[0].innerText;
+        alert(`You Have Successfully Copied ${number}`);
+    });
+});
 
 
 
