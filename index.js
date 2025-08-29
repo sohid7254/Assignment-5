@@ -31,10 +31,7 @@ for (const card of cardList) {
             .then(() => {
                 alert(`You Have Successfully Copied ${number}`);
             })
-            .catch((err) => {
-                console.error("Copy failed:", err);
-                alert("Failed to copy. Please try again.");
-            });
+            
     });
 }
 
@@ -48,11 +45,11 @@ for (const btn of callButtons) {
     const historyList = document.getElementById("historyList");
 
     if (coinCount < 20) {
-      alert("Not enough coins to make a call.");
+      alert("❌Not enough coins to make a call.");
       return;
     }
 
-    alert(`Calling ${name} at ${number}`);
+    alert(`📞 Calling ${name} at ${number}`);
     coinCount -= 20;
     coinDisplay.textContent = coinCount;
 
