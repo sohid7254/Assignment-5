@@ -22,15 +22,14 @@ const cardList = document.querySelectorAll(".copy-btn");
 
 for (const card of cardList) {
     card.addEventListener("click", function () {
+      let number = card.parentElement.parentElement.children[0].children[3].children[0].innerText;
+      navigator.clipboard.writeText(number).then(() => {
+          alert(`You Have Successfully Copied ${number}`);
+      });
         copyCount++;
         copyDisplay.innerText = copyCount;
 
-        let number = card.parentElement.parentElement.children[0].children[3].children[0].innerText;
-        navigator.clipboard
-            .writeText(number)
-            .then(() => {
-                alert(`You Have Successfully Copied ${number}`);
-            })
+        
             
     });
 }
